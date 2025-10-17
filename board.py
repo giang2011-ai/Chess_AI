@@ -8,10 +8,10 @@ class GameBoard:
         self.screen = screen
 
         # 🔹 Load hình bàn cờ (hỗ trợ cả PNG và JPG)
-        if os.path.exists("assets/board.png"):
-            self.board_img = pygame.image.load("assets/board.png").convert_alpha()
+        if os.path.exists("E:/duong/co so AI/Chess_AI/assets/board.png"):
+            self.board_img = pygame.image.load("E:/duong/co so AI/Chess_AI/assets/board.png").convert_alpha()
         else:
-            self.board_img = pygame.image.load("assets/board.jpg").convert()
+            self.board_img = pygame.image.load("E:/duong/co so AI/Chess_AI/assets/board.jpg").convert()
 
         # 🔹 Chỉnh kích thước ảnh bàn cờ theo cấu hình
         self.board_img = pygame.transform.scale(
