@@ -87,3 +87,10 @@ class GameBoard:
             turn_surface,
             (config.BOARD_X, config.BOARD_Y + config.BOARD_HEIGHT + 30),
         )
+
+    def draw_timer(self, red_time, black_time):
+        font = pygame.font.Font(None, 24)
+        red_time_text = font.render(f"Red: {int(red_time)}s", True, config.RED)
+        black_time_text = font.render(f"Black: {int(black_time)}s", True, config.BLACK)
+        self.screen.blit(red_time_text, (10, 500))
+        self.screen.blit(black_time_text, (10, 100))
